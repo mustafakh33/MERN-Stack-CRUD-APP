@@ -1,0 +1,38 @@
+.main-content {
+  height: calc(100vh - 139px);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.table {
+  margin-top: 20px;
+}
+
+.table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.btn {
+  width: 48%; 
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+}

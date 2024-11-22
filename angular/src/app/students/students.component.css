@@ -1,0 +1,28 @@
+.main-content{
+  height: calc(100vh - 139px);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+tbody tr:hover {
+    background-color: #f8f9fa; 
+  }
+
+  .custom-button {
+    background-color: #ff5733; 
+    color: white; 
+    border: none; 
+  }
+  .custom-button:hover {
+    background-color: #ff5733; 
+    color: white; 
+    border: none; 
+  }
+  .form-control:focus {
+    outline: none !important;   
+    box-shadow: none !important;
+  }
+  .card-body {
+    max-height: calc(100vh - 200px); 
+    overflow-y: auto; 
+  }

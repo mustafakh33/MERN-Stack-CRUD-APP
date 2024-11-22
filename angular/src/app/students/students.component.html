@@ -1,0 +1,72 @@
+<section class="students main-content py-5 w-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <div class="mb-4">
+              <div class="input-group">
+                <input
+                  type="text"
+                  [(ngModel)]="searchtext"
+                  (input)="search()"
+                  name="searchtext"
+                  class="form-control"
+                  placeholder="Search for student..."
+                  aria-label="Search"
+                />
+                <button (click)="search()" class="btn custom-button">
+                  Search
+                </button>
+              </div>
+            </div>
+
+            <table
+              class="table table-bordered table-hover text-center caption-top"
+            >
+              <thead class="table-dark">
+                <tr>
+                  <th>FullName</th>
+                  <th>Email</th>
+                  <th>Age</th>
+                  <th>Class</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                @for (student of this.allStudents; track student) {
+                <tr>
+                  <td>{{ student.fullName }}</td>
+                  <td>{{ student.email }}</td>
+                  <td>{{ student.age }}</td>
+                  <td>{{ student.class }}</td>
+                  <td>
+                    <a
+                      class="btn btn-info me-1"
+                      [routerLink]="['/details', student._id]"
+                    >
+                      <i class="fas fa-info-circle"></i> Details
+                    </a>
+                    <a
+                      class="btn btn-warning me-1"
+                      [routerLink]="['/update', student._id]"
+                    >
+                      <i class="fas fa-edit"></i> Edit
+                    </a>
+                    <a
+                      class="btn btn-danger"
+                      [routerLink]="['/delete', student._id]"
+                    >
+                      <i class="fas fa-trash-alt"></i> Delete
+                    </a>
+                  </td>
+                </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
